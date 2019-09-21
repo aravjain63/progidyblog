@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>my blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">DMy Blog</a></h1>
+        </div>
+
+        <!--<div id = "cool">-->
+
+
+            {% for post in posts %}
+               <h2><a href=" ">{{post.title}}</a></h2>
+               <p3>published: {{ post.pub_date}}</p3>
+               <p> {{post.text|linebreaksbr}}</p>
+
+            {% endfor %}
+       
+       
+       
+       
+       
+       
+            <!-- <div>
+            <h2><a href="">My first post</a></h2>
+            <p>published: 14.06.2014, 12:14</p>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+
+        <div>
+            <h2><a href="">My second post</a></h2>
+            <p>published: 14.06.2014, 12:14</p>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
+        </div>-->
+        <!--</div>-->  
+    </body>
+</html>
