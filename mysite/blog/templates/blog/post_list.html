@@ -1,21 +1,5 @@
 {% extends 'blog/base.html' %}
-{% load static %}
-<html>
-    <head>
-        <title>my blog</title>
-        <link rel="stylesheet" type="text/css" href="{%static 'blog/style.css' %}">
 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        
-        <div class="page-header" >
-           
-            <h1><a href="/">My Blog</a></h1>
-          
-        </div>
 
         <div class="content container">
                 <div class="row">
@@ -26,11 +10,13 @@
                                 <div class="date">
                                     <p> published: {{ post.pub_date }} </p>
                                 </div>
-                                <div class="post-title">
-                                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                                <div class="title">
+                                <a href="{% url 'post_detail' pk=post.pk %}">
+                                <h2>{{ post.title|title }}</h2>
+                                </a>
                                 </div>
-                                <p> {{post.text|linebreaksbr}}</p>
-                              <!--- <p><a href="{% url 'post_detail' pk=post.pk %}" {{post.text|linebreaksbr}}...</a></p>-->
+
+                                <p> {{ post.text|truncatewords:20 |linebreaksbr}} </p>
                                 
                             </div>
                         {% endfor %}
@@ -41,17 +27,4 @@
        
        
        
-            <!-- <div>
-            <h2><a href="">My first post</a></h2>
-            <p>published: 14.06.2014, 12:14</p>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <h2><a href="">My second post</a></h2>
-            <p>published: 14.06.2014, 12:14</p>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>-->
-        <!--</div>-->  
-    </body>
-</html>
+  
