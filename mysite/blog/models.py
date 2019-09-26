@@ -8,8 +8,8 @@ class Post(models.Model):
     author_name = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    created_date = models.DateTimeField(default=datetime.now())
-    pub_date =  models.DateTimeField(default=datetime.now())
+    created_date = models.DateTimeField(default=timezone.now())
+    pub_date =  models.DateTimeField(default=timezone.now())
     #email = models.models.CharField(_("enter your email"), max_length=50)
     def __str__(self):
         return self.title

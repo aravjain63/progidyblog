@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
+from datetime import datetime
+
 
 
 # Create your views here.
@@ -19,7 +21,7 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False) 
             post.author_name = request.user
-          # post.pub_date = timezone.now() """rendered this obsolete by changing default value on models.py"
+           # post.pub_date = timezone.now() 
             post.save()
             return redirect('post_detail', pk=post.pk)   
     else:
@@ -33,7 +35,7 @@ def post_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author_name = request.user
-            post.pub_date = timezone.now()
+            #post.pub_date = timezone.now()
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
