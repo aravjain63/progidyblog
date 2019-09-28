@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from datetime import datetime
+#from datetime import datetime
 
 class Post(models.Model):
     author_name = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
