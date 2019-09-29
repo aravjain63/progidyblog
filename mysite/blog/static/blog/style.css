@@ -4,6 +4,10 @@
     margin: 0 0 0 0;
   }
   
+  .top-menu {
+    margin-top: 30px;
+
+  }
   .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
     color: #ffffff;
     font-size: 36pt;
@@ -36,10 +40,14 @@
     float: right;
   }
   
-  .post-form textarea, .post-form input {
+  .post-form textarea, .post-form input  {
     width: 100%;
     color: white;
     background-color: black;
+    font-family: 'Ubuntu' ;
+    font-weight: 'light';
+    font-style: italic;
+
   }
   
   .top-menu, .top-menu:hover, .top-menu:visited {
