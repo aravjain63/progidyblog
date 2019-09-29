@@ -1,65 +1,74 @@
 .page-header {
-  background-image: linear-gradient(to bottom left, black, grey);
-  padding: 20px 20px 20px 40px;
-  margin: 0 0 20 0;
-}
-
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
-  color: #ffffff;
-  font-size: 36pt;
-  text-decoration: none;
-  font-family: 'Lobster', cursive;
-  text-align: left;
-}
-
-.content {
-  margin-left: 40px;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Lobster', cursive;
-}
-
-.page-header {
-  color: #ffffff;
-  font-size: 30pt;
-  text-decoration: none;
-  font-family: 'Lobster', cursive;
-}
-
-.date {
-  color: black;
-}
-
-.save {
-  float: right;
-}
-
-.post-form textarea, .post-form input {
-  width: 100%;
-}
-
-.top-menu, .top-menu:hover, .top-menu:visited {
-  color: #ffffff;
-  float: right;
-  font-size: 26pt;
-  margin-right: 20px;
-}
-
-.post {
-  margin-bottom: 70px;
-}
-
-.post h2 a, .post h2 a:visited {
-  color: #000000;
-  text-align: left;
-  font-size: 36pt;
-  text-decoration: none;
-  font-family: 'Lobster', cursive;
-}
-.title h2 a, h2 a:visited {
-  color: #000000;
-}
-body {
-    background-image: linear-gradient(to bottom right, black, grey);
+    background-color: black;
+    padding: 20px 20px 20px 20px;
+    margin: 0 0 0 0;
   }
+  
+  .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    text-align: left;
+  }
+  
+  .content {
+    margin-left: 40px;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+    color: white;
+  }
+  
+  .page-header {
+    color: #ffffff;
+    font-size: 30pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .date {
+    color: white;
+  }
+  
+  .save {
+    float: right;
+  }
+  
+  .post-form textarea, .post-form input {
+    width: 100%;
+    color: white;
+    background-color: black;
+  }
+  
+  .top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+  }
+  
+  .post {
+    margin-bottom: 70px;
+  }
+  
+  .post h2 a, .post h2 a:visited {
+    color: white;
+    text-align: left;
+    font-size: 36pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+  }
+  .title h2 a, h2 a:visited {
+    color: white;
+  }
+  body {
+      background-color: black;
+    }
+p {
+    color: white;
+    font-family: 'Ubuntu';
+    font-style: 'light';
+    font-style: normal;
+}
