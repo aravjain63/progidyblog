@@ -10,3 +10,4 @@ myproj
 .vscode
 mysite\__pycache__
 blog\migrations
+local_Settings.py
