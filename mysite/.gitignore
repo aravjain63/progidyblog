@@ -1,12 +1,5 @@
 *.pyc
-*~
-__pycache__
-myvenv
 db.sqlite3
-/static
-.DS_Store
-/.vscode
-myproj
-.vscode
-mysite\__pycache__
-local_Settings.py
+myvenv
+__pycache__
+local_settings.py
