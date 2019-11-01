@@ -1,0 +1,81 @@
+.page-header {
+    background-color: black;
+    padding: 20px 20px 20px 20px;
+    margin: 0 0 0 0;
+  }
+  
+  .top-menu {
+    margin-top: 30px;
+
+  }
+  .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+    text-align: left;
+  }
+  
+  .content {
+    margin-left: 40px;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+    color: white;
+  }
+  
+  .page-header {
+    color: #ffffff;
+    font-size: 30pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .date {
+    color: white;
+  }
+  
+  .save {
+    float: right;
+  }
+  
+  .post-form textarea, .post-form input  {
+    width: 100%;
+    color: white;
+    background-color: black;
+    font-family: 'Ubuntu' ;
+    font-weight: 'light';
+    font-style: italic;
+  }
+  
+  .top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+  }
+  
+  .post {
+    margin-bottom: 70px;
+  }
+  
+  .post h2 a, .post h2 a:visited {
+    color: white;
+    text-align: left;
+    font-size: 36pt;
+    text-decoration: none;
+    font-family: 'Lobster', cursive;
+  }
+  .title h2 a, h2 a:visited {
+    color: white;
+  }
+  body {
+      background-color: black;
+    }
+p {
+    color: white;
+    font-family: 'Ubuntu';
+    font-style: 'light';
+    font-style: normal;
+}
