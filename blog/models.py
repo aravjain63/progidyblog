@@ -19,12 +19,6 @@ class Post(models.Model):
     def publish(self):
         self.published_date = timezone.now
         self.save()
-
-
- 
-        
-
-
 #Class Email(models.Model):
     #author_id = models.ForeignKey(Post,on_delete=models.CASCADE)
 

@@ -5,5 +5,6 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new', views.post_new, name = 'post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-    path('bookmark/', views.bookmark , name = 'bookmark')
+    path('YourPosts/', views.user_posts , name = 'YourPosts'),
+    path('YourPosts/<int:pk>/', views.user_posts_details, name='post_details'),
 ]

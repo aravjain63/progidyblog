@@ -14,7 +14,6 @@ def post_list(request):
     
 def post_detail(request, pk):
     post = get_object_or_404(Post,pk=pk)
-    #post_author_name = Post.author_name
     return render(request, 'blog/post_detail.html', {'post' : post})
     
 def post_new(request):
@@ -44,7 +43,11 @@ def post_edit(request, pk):
         form = PostForm(instance = post)
     return render(request, 'blog/post_new.html', {'form': form})
 
-def bookmark(request):
-    posts = Post.object.all().filter(author_name = request.user)
-    return render(request, 'blog/bookmark.html', {'posts': posts})
+def user_posts(request):
+    posts = Post.objects.all().filter(author_name = request.user)
+    return render(request, 'blog/user.html', {'posts': posts})
+def user_posts_details(request, pk):
+    post = get_object_or_404(Post,pk=pk)
+    return render(request, 'blog/YourPost.html', {'post' : post})
+
 

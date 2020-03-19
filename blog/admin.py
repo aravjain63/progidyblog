@@ -8,6 +8,7 @@ class PostAdmin(admin.ModelAdmin):
         (None,      {'fields': ['title']}),
         ('text', {'fields': ['text']}), 
         ('Date information', {'fields': ['created_date', 'published_date'], 'classes': ['collapse']}),
+        
     ]
     list_display = ('title', 'published_date')
     search_fields = ['title', 'published_date']
