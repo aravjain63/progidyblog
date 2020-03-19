@@ -17,6 +17,10 @@
             <span class="glyphicon glyphicon-plus"></span>
 
             </a>
+            {% else %}
+                <a href = "{% url 'login' %}" class="top-menu">
+                log in 
+                </a>
         {% endif %}
             <h1><a href="/">My Blog</a></h1>
     </div>
@@ -27,6 +31,7 @@
                         {% block content %}
                         {% endblock %}
                     </div>
+                    <!--<a href = "/logout"> logout</a>-->
                 </div>
             </div>
     </body>
