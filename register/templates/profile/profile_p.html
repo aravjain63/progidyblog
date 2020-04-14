@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<h1>{{request.user.username}}</h1>
+<h1>{{request.user.first_name}} {{request.user.last_name}}</h1>
+{% if request.user.profile.image %}
+<img src = "{{request.user.profile.image.url}}"width = 240px height =240px>
+{% endif %}
+{% if user.is_authenticated and request.user.profile.image %}
+    <form method = 'POST' action = "{% url 'delt_image' %}">
+{% csrf_token %}
+<button type = "submit">delete</button>
+</form>
+    {% endif %}
+<p>{{request.user.profile.bio}}</p>
+
+
+
+{% endblock %}

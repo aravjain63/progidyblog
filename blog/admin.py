@@ -7,6 +7,7 @@ class PostAdmin(admin.ModelAdmin):
         (None,      {'fields': ['author_name']}),
         (None,      {'fields': ['title']}),
         ('text', {'fields': ['text']}), 
+        ('image', {'fields': ['image']}), 
         ('Date information', {'fields': ['created_date', 'published_date'], 'classes': ['collapse']}),
         
     ]

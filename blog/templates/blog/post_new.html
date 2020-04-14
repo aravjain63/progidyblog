@@ -1,11 +1,18 @@
 {% extends 'blog/base.html' %}
 
+
 {% block content %}
+{% if user.is_authenticated %}
+{% load crispy_forms_tags %}
     <h2>New Post </h2>
-    <form method ="POST" class = "post-form">
+    <form method ="POST" class = "post-form" enctype="multipart/form-data">
     {% csrf_token %}
      {{ form.as_p }}
-    <button type = "submit" class="save btn btn-default">save</button>
-    </form>
+    <button type = "submit">save</button>
+    </form> 
     <!--<p>{{post.text|wordcount}}-->
+{% else %}
+     <h1>You are not logged in</h2>
+ <h2> login <a href = "{% url 'login' %}">now</a></h2>
+ {% endif %}
 {% endblock %}

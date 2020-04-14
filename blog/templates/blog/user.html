@@ -1,18 +1,36 @@
-{% extends "blog/base.html" %}
-
-{% block title %}
-your posts
+{% extends 'blog/base.html' %}
+{% block content %} 
+    <div class="container mt-3">
+        {% for post in posts %}
+        <div class="card mb-3">
+            <div class="row no-gutters py-2 px-3 d-flex">
+                {% if post.image %}            
+                <div class="col-md-8 d-flex order-2 order-md-1 justify-content-start">
+                    <div class="card-body pt-0">
+                        <a href="{% url 'post_detail' pk=post.pk %}"><h1 class="card-title title d-flex mb-1">{{ post.title|title }} </h1></a>
+                        <h5 class="card-text author">{{post.author_name.get_short_name|capfirst}}</h5>
+                        <a href="{% url 'post_detail' pk=post.pk %}"><p class="card-text text">{{ post.text|truncatewords:35|linebreaksbr}} </p></a>
+                        <p class="card-text"><small class="text-muted">Last updated {{ post.published_date|date:"F d, y"}}</small></p>
+                    </div>    
+                </div>
+                <div class="col-md-4 d-flex order-1 order-md-2 align-middle py-1">
+                    <img src="{{ post.image.url }}" alt="{{post.title}}" class="img-fluid rounded">
+                </div>
+                {% else %}
+                <div class="col-md-12 d-flex justify-content-end">
+                    <div class="card-body pt-0">
+                        <a href="{% url 'post_detail' pk=post.pk %}"><h1 class="card-title title d-flex mb-1">{{ post.title|title }} </h1></a>
+                        <h5 class="card-text author">{{post.author_name.get_short_name|capfirst}}</h5>
+                        <a href="{% url 'post_detail' pk=post.pk %}"><p class="card-text text">{{ post.text|truncatewords:35|linebreaksbr}} </p></a>
+                        <p class="card-text"><small class="text-muted">Last updated {{ post.published_date|date:"F d, y"}}</small></p>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
 
-{% block content %}
-{% for i in posts %}
-
-<h1>{{i.title}}</h1>
-<a href="{% url 'post_details' pk=i.pk %}">
-
-<p> {{ i.text|truncatewords:20|linebreaksbr}} </p>
-</a>
-{% endfor %}
-         
-
-{% endblock %}
+       
+  

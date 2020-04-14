@@ -1,15 +1,77 @@
 {% extends 'blog/base.html' %}
 
-{{% block content %}
-    <div class = "post">
-        {% if post.pub_date %}
-        <div class = "date">
-            {{post.published_date}}
-        </div>
-        {% endif %}
+
+<!--    <div class = "post">
+    
     <div class="post-title">
     <h2> {{post.title}}</h2>
+    <div class="date">
+    <p> {{ post.published_date|date:"F d, y"}} </p>
     </div>
+    <h4> {{post.author_name.get_short_name|capfirst}}</h4>
+    </div>
+
     <p> {{post.text|linebreaksbr}}</p>
+    
+    {% if user.is_authenticated and request.user == post.author_name %}
+    <a href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a href = "{% url 'post_del' pk=post.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
+    {% endif %}
+    {% if post.image %}
+    <img src="{{ post.image.url }}" alt="{{post.title}}">
+    {% endif %}
+    {% if user.is_authenticated and request.user == post.author_name and post.image %}
+    <form method = 'POST' action = "{% url 'del_image' pk=post.pk %}">
+{% csrf_token %}
+<button type = "submit">delete</button>
+</form>
+    {% endif %}
+    </div>-->
+{{% block content %}
+
+<div class="container pt-2">
+    <div class="row d-flex mx-auto">
+        <div class="col-md-1 col-sm-1">
+        </div>
+        <div class="col-md-10">
+            <div class="post-title">
+                <h1> {{post.title|capfirst}}</h1>
+            </div>
+        </div>
+        <div class="col-sm-1 col-md-1"></div>
     </div>
+    <div class="row d-flex mx-auto my-sm-auto">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 author d-flex justify-content-start">
+            <h5 class="author">{{ post.published_date|date:"F d, y"}}</h5>
+        </div>
+        <div class="col-md-8 author d-flex justify-content-end">
+            <h5 class="author">-{{post.author_name.get_short_name|capfirst}}</h5>
+        </div>
+        <div class="col-md-1"></div>   
+    </div>
+    <div class="row d-flex pl-2 mx-auto">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 ruler d-flex rounded"></div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row mx-auto pt-2">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 post-text d-flex justify-content-start">
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
 {% endblock  %}}
+

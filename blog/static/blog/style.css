@@ -1,49 +1,41 @@
 .page-header {
-    background-color: black;
-    padding: 20px 20px 20px 20px;
-    margin: 0 0 0 0;
-  }
-  body{
-    background-color: black;
-  }
-  
-  
-  .top-menu {
-    margin-top: 30px;
-
-  }
-  .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active{
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
-    font-family: 'Lobster', cursive;
-    text-align: left;
-  }
-  
-  .content {
-    margin-left: 40px;
-  }
-  
-  h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
-    color: white;
-  }
-  
-  .page-header {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #eee;
     color: #ffffff;
     font-size: 30pt;
+  }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.dropdown-toggle {
+    font-size: 35pt;
+}
+body {
+  text-decoration: none;
+}
+.dropdown-item {
+  font-family: 'Lato', sans-serif;
+}
+
+  .card {
+      background-color: rgb(18, 22, 29);
+      box-shadow: 6px 7px 20px 0px black;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-style: bold;
     text-decoration: none;
-    font-family: 'Lobster', cursive;
+    color: #ffffff;
+    
   }
-  
-  .date {
-    color: white;
+    .card-title.login {
+    color: #6c757c;
+    font-family: 'Raleway';
   }
-  
-  .save {
-    float: right;
-  }
-  
   .post-form textarea, .post-form input  {
     width: 100%;
     color: white;
@@ -52,34 +44,137 @@
     font-weight: 'light';
     font-style: italic;
   }
-  
-  .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
-  }
-  
-  .post {
-    margin-bottom: 70px;
-  }
-  
-  .post h2 a, .post h2 a:visited {
-    color: white;
-    text-align: left;
-    font-size: 36pt;
-    text-decoration: none;
-    font-family: 'Lobster', cursive;
-  }
-  .title h2 a, h2 a:visited {
-    color: white;
-  }
-  body {
-      background-color: black;
+
+body {
+      background-color: rgb(33, 37, 41);
     }
-p {
-    color: white;
-    font-family: 'Ubuntu';
-    font-style: 'light';
-    font-style: normal;
+.form {
+  color: #ffffff;
+}
+.form-group {
+  font-family: 'Lato', sans-serif;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+      pointer-events: none;
+  }
+  .dropdown-toggle::after {
+      content: none;
+  }
+  .text { 
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      color: #ffffff;
+  }
+.author {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+
+.page-title,.page-title a, .page-title a:visited, .page-title:active,.page-title:hover {
+  font-family: 'Raleway', sans-serif;
+  font-size: 35pt;
+  color: #ffffff;
+  text-decoration: none;
+}
+.dropdown-item,.dropdown-item a,.dropdown-item a:visited,.dropdown-item a:active {
+  color: #000000;
+}
+.post-title {
+  font-family: 'Playfair Display', sans-serif;
+  color: #ffffff;
+}
+.ruler {
+  background-color: #ffffff;
+  height: 2px;
+ 
+}
+.post-text {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14pt;
+}
+.bg-img {
+position: absolute;
+background-image: url('asset.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+height: 100%;
+width: 100%;
+filter: blur(5px);
+transform: scale(1.4,1.4);
+}
+
+.card-footer {
+    padding: 0;
+    border-top: 1px solid white;}
+
+.login-img {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-image: url('asset.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
+  }
+  .for {
+  padding-top: 6%;
+  padding-bottom: 6%;
+  padding-left: 7%;
+  padding-right: 8%;
+  }
+  .mb-3 {
+  border: none;
+  
+  overflow: hidden;
+  }
+
+  input {
+  border-radius: 25px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  }
+  .btn-pr {
+  padding: 10px 30px 10px 30px;
+  border-radius: 25px;
+  margin: auto;
+  color: #6c757c;
+  border: 1px solid #6c757c;
+  }
+  .btn-pr:hover {
+    padding: 10px 30px 10px 30px;
+    border-radius: 25px;
+    margin: auto;
+    color: #ffffff;
+    background-color: rgb(31, 170, 249); }
+
+.img-txt {
+  display: inline-block;
+  font-family: 'Raleway';
+  padding: 20% 20% 20% 20%;
+  color: #ffffff;
+}
+.rem {
+  overflow: hidden;
+}
+.card-body.login {
+outline: 2px solid #23143b;
+outline-offset: 25px;
+
 }
